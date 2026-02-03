@@ -1,0 +1,22 @@
+        /*External CSS*/
+        h1 {
+            color: maroon;
+            font-family: 'Comic', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1.MainHeading {
+            text-align: center;
+
+        }
+        p.cust {
+            color: blue;
+            border: 2px inset;
+            border-width: 5pt;
+            border-radius: 6pt;
+
+        }
+        p.cust:hover {
+            color: red;
+        }
+        p.cust:active {
+            color: green;
+        }

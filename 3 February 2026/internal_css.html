@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Workshop - Internal CSS</title>
+
+    <style> 
+        /*Internal CSS*/
+        h1 {
+            color: maroon;
+            font-family: 'Comic', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1.MainHeading {
+            text-align: center;
+
+        }
+        p.cust {
+            color: blue;
+            border: 2px inset;
+            border-width: 5pt;
+            border-radius: 6pt;
+
+        }
+        p.cust:hover {
+            color: red;
+        }
+        p.cust:active {
+            color: green;
+        }
+        
+    </style>
+  </head> 
+<body>
+    <h1 class="MainHeading">Welcome to the IT Workshop!</h1>
+    <h1>This is a main heading without center.</h1>
+    <hr>
+    <h2 style="color: green;">This is a green sub heading using inline CSS </h2>
+    <p class="cust"> This Text Changes colour when clicked or hovered</p>
+    
+</html>
