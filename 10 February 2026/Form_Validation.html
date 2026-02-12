@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+</head>
+<body>
+    <h1>Registeration Form</h1>
+    <form name="RegForm" onsubmit="return validateForm()" onreset="resetForm()">
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your Full Name">
+            <br>
+            <span style="color: brown;" id="name-error" class="error-message"> </span>
+            <br>
+
+            <label>Phone Number:</label>
+            <input type="text" id="phone">
+            <br>
+            <span style="color: brown;" id="phone-error" class="error-message"> </span>
+            <br>
+
+            <label>Email:</label>
+            <input type="text" id="email">
+            <br>
+            <span style="color: brown;" id="email-error" class="error-message"> </span>
+            <br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            
+
+        </p>
+        
+    </form>
+</body>
+
+<script>
+    function validateForm() {
+        const name=document.getElementById("name").value;
+        const nameError=document.getElementById("name-error");
+
+        nameError.textContent="";
+        let isValid=true;
+        if(name.trim()===""|| /\d/.test(name)){
+            nameError.textContent="Name is empty or contains numbers";
+            isValid=false;
+        }
+        
+    
+    if(isValid){
+        alert("Form submitted successfully");
+    }   
+return isValid;
+    }
+    </script>
+
+</html>

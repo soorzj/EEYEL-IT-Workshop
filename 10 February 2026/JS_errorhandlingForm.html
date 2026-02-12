@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Get values
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+
+            // Error elements
+            const nameErr = document.getElementById("name-error");
+            const phoneErr = document.getElementById("phone-error");
+            const emailErr = document.getElementById("email-error");
+
+            // Clear previous errors
+            nameErr.textContent = "";
+            phoneErr.textContent = "";
+            emailErr.textContent = "";
+
+            // Name validation
+            if (name === "" || /\d/.test(name)) {
+                nameErr.textContent = "Please enter a valid name.";
+                isValid = false;
+            }
+
+            // Phone validation
+            if (!/^\d{10}$/.test(phone)) {
+                phoneErr.textContent = "Phone number must be 10 digits.";
+                isValid = false;
+            }
+
+            // Email validation
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailErr.textContent = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+            }
+
+            return isValid;
+        }
+
+        function resetErrors() {
+            document.getElementById("name-error").textContent = "";
+            document.getElementById("phone-error").textContent = "";
+            document.getElementById("email-error").textContent = "";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+
+        <form onsubmit="return validateForm()" onreset="resetErrors()">
+
+            <label>Name:</label>
+            <input type="text" id="name">
+            <div class="error" id="name-error"></div>
+
+            <label>Phone Number:</label>
+            <input type="text" id="phone">
+            <div class="error" id="phone-error"></div>
+
+            <label>Email:</label>
+            <input type="text" id="email">
+            <div class="error" id="email-error"></div>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
