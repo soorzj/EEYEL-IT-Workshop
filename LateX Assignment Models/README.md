@@ -1,4 +1,4 @@
-Assignment 1 - Document Creation Using LaTeX 
+# Assignment 1 - Document Creation Using LaTeX 
 Jan 15 (Edited Jan 17)
 
 
@@ -24,3 +24,7 @@ with their corresponding PDF files to the classroom.
 
 ⚠️ Important Note:
 No two assignments should be the same.
+
+---
+Link to the referred Conference paper on [IEEE Xplore](https://ieeexplore.ieee.org/document/9650314)
+⚠️`IF THE INCLUSION OF THIS PAPER AFFECTS ANY OF THE INSTITUIONS OR PERSON(s) IN ANY MANNER, PLEASE CONTACT ME FIRST ON MY MAIL / KINDLY PULL REQUEST TO DELETE THE FILES. `
